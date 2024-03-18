@@ -1,23 +1,15 @@
 terraform {
-  # cloud config
-  # cloud {
-  #   organization = var.organization
-  #   workspaces {
-  #     name = var.workspace
-  #   }
-  # }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.41.0"
+      version = "4.52.0"
     }
-
     random = {
       source  = "hashicorp/random"
-      version = "3.6.0"
+      version = "3.4.3"
     }
   }
+  required_version = ">= 1.1.0"
 }
 
 provider "aws" {
