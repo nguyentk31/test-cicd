@@ -1,7 +1,9 @@
 name: Test GitHub Actions && Terraform Apply
 run-name: ${{ github.actor }} is testing 
 on: 
-  pull_request:
+  push:
+    branches:
+      - main
 
 env:
   TF_CLOUD_ORGANIZATION: "${{ secrets.TF_CLOUD_ORGANIZATION }}"
