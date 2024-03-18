@@ -1,11 +1,11 @@
-name: Test GitHub Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Test GitHub Actions && Terraform
+run-name: ${{ github.actor }} is testing 🚀
 on: [push]
 
 env:
-  TF_CLOUD_ORGANIZATION: "${{ secrets.TF_CLOUD_ORGANIZATION }}"
+  TF_CLOUD_ORGANIZATION: "nguyen-uit"
+  TF_WORKSPACE: "test"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "${{ secrets.TF_WORKSPACE }}"
   CONFIG_DIRECTORY: "./"
 
 
