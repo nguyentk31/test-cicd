@@ -5,18 +5,17 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.52.0"
+      version = "5.41.0"
     }
     random = {
-      source  = "hashicorp/random"
-      version = "3.4.3"
+      source = "hashicorp/random"
+      version = "3.6.0"
     }
   }
-  required_version = ">= 1.1.0"
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-west-1"
 }
 
 resource "random_pet" "sg" {}
