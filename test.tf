@@ -5,18 +5,17 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.52.0"
+      version = "5.41.0"
     }
     random = {
-      source  = "hashicorp/random"
-      version = "3.4.3"
+      source = "hashicorp/random"
+      version = "3.6.0"
     }
   }
-  required_version = ">= 1.1.0"
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-west-1"
 }
 
 resource "random_pet" "sg" {}
@@ -47,7 +46,7 @@ resource "aws_instance" "web" {
               apt-get update
               apt-get install -y apache2
               sed -i -e 's/80/8080/' /etc/apache2/ports.conf
-              echo "Hello World" > /var/www/html/index.html
+              echo "Hello World!" > /var/www/html/index.html
               systemctl restart apache2
               EOF
 }
