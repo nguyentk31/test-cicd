@@ -1,4 +1,4 @@
-name: Test GitHub Actions && Terraform Plan
+name: Github actions 101
 run-name: ${{ github.actor }} is planning 🚀
 on: 
   pull_request:
