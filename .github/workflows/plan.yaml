@@ -5,6 +5,8 @@ on:
 
 env:
   CONFIG_DIRECTORY: "./"
+  TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORGANIZATION }}
+  TF_WORKSPACE: ${{ secrets.TF_WORKSPACE }}
 
 jobs:
   Terraform:
