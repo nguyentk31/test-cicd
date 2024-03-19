@@ -6,11 +6,6 @@ on:
 env:
   CONFIG_DIRECTORY: "./"
 
-defaults:
-  run:
-    working-directory: ${{ env.CONFIG_DIRECTORY }}
-
-
 jobs:
   Terraform:
     name: "Terraform Plan"
@@ -18,6 +13,9 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+    defaults:
+      run:
+        working-directory: ${{ env.CONFIG_DIRECTORY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4.1.1
