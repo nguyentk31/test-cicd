@@ -1,5 +1,5 @@
 name: Github actions 101
-run-name: ${{ github.actor }} is planning 🚀
+run-name: ${{ github.actor }} is testing 🚀
 on: 
   pull_request:
 
