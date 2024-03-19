@@ -2,9 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 terraform {
-
   cloud {
-    
   }
   required_providers {
     aws = {
@@ -12,7 +10,7 @@ terraform {
       version = "5.41.0"
     }
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.6.0"
     }
   }
